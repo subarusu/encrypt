@@ -16,7 +16,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) List of inclusions using pattern matching
-#source.include_patterns = data/*
+source.include_patterns = data/*
 
 # (list) Source files to exclude (let empty to not exclude anything)
 #source.exclude_exts = spec
@@ -37,17 +37,17 @@ version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,pillow,cryptography
+requirements = python==3.9.6,kivy,pillow,cryptography,cython==0.29.19,build-essential,ffmpeg,libsdl2-dev,libsdl2-image-dev,libsdl2-mixer-dev,libsdl2-ttf-dev,libportmidi-dev,libswscale-dev,libavformat-dev,libavcodec-dev,zlib1g-dev,libgstreamer1.0,gstreamer1.0-plugins-base,gstreamer1.0-plugins-good,build-essential,libsqlite3-dev,sqlite3,bzip2,libbz2-dev,zlib1g-dev,libssl-dev,openssl,libgdbm-dev,libgdbm-compat-dev,liblzma-dev,libreadline-dev,libncursesw5-dev,libffi-dev,uuid-dev,libffi6
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
 
 # (str) Presplash of the application
-presplash.filename = data/presplash.png
+presplash.filename = %(source.dir)s/data/presplash.png
 
 # (str) Icon of the application
-icon.filename = data/icon.png
+icon.filename = %(source.dir)s/data/icon.png
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -229,7 +229,7 @@ fullscreen = 0
 
 # (list) Android additional libraries to copy into libs/armeabi
 #android.add_libs_armeabi = libs/android/*.so
-#android.add_libs_armeabi_v7a = libs/android-v7/*.so
+android.add_libs_armeabi_v7a = libs/android-v7/*.so
 #android.add_libs_arm64_v8a = libs/android-v8/*.so
 #android.add_libs_x86 = libs/android-x86/*.so
 #android.add_libs_mips = libs/android-mips/*.so
@@ -287,7 +287,7 @@ android.archs = armeabi-v7a
 # android.release_artifact = aab
 
 # (str) The format used to package the app for debug mode (apk or aar).
-# android.debug_artifact = apk
+ android.debug_artifact = apk
 
 #
 # Python for android (p4a) specific
