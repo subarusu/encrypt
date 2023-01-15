@@ -37,7 +37,7 @@ version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,pillow,cryptography,sdl2
+requirements = python3,kivy,pillow,cryptography
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -262,7 +262,7 @@ android.add_libs_armeabi_v7a = libs/android-v7/*.so
 
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
-android.archs = armeabi-v7a
+android.archs = armeabi-v7a,arm64-v8a
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
 # this is not the same as app version and should only be edited if you know what you're doing
@@ -287,7 +287,7 @@ android.archs = armeabi-v7a
 # android.release_artifact = aab
 
 # (str) The format used to package the app for debug mode (apk or aar).
- android.debug_artifact = apk
+# android.debug_artifact = apk
 
 #
 # Python for android (p4a) specific
@@ -386,10 +386,10 @@ log_level = 2
 warn_on_root = 1
 
 # (str) Path to build artifact storage, absolute or relative to spec file
-# build_dir = ./.buildozer
+build_dir = ./.buildozer
 
 # (str) Path to build output (i.e. .apk, .aab, .ipa) storage
-# bin_dir = ./bin
+bin_dir = ./bin
 
 #    -----------------------------------------------------------------------------
 #    List as sections
