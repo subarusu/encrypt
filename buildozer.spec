@@ -13,7 +13,7 @@ package.domain = org.cat
 source.dir = .
 
 # (list) Source files to include (let empty to include all the files)
-source.include_exts = py,png,jpg,kv,atlas
+source.include_exts = py,png,jpg
 
 # (list) List of inclusions using pattern matching
 source.include_patterns = data/*
@@ -37,8 +37,7 @@ version = 1.0
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python==3.9.6,kivy,pillow,cryptography,cython==0.29.19,build-essential,ffmpeg,libsdl2-dev,libsdl2-image-dev,libsdl2-mixer-dev,libsdl2-ttf-dev,libportmidi-dev,libswscale-dev,libavformat-dev,libavcodec-dev,zlib1g-dev,libgstreamer1.0,gstreamer1.0-plugins-base,gstreamer1.0-plugins-good,build-essential,libsqlite3-dev,sqlite3,bzip2,libbz2-dev,zlib1g-dev,libssl-dev,openssl,libgdbm-dev,libgdbm-compat-dev,liblzma-dev,libreadline-dev,libncursesw5-dev,libffi-dev,uuid-dev,libffi6
-
+requirements = python3,kivy,pillow,cryptography,cython==0.29.19
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
 # requirements.source.kivy = ../../kivy
